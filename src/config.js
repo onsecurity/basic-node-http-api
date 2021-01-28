@@ -8,10 +8,10 @@ module.exports = {
     logPrettyColorize: process.env.hasOwnProperty('LOG_PRETTY_COLORIZE') ? Boolean(process.env.LOG_PRETTY_COLORIZE) : true,
 
     // http config
-    httpPort: process.env.hasOwnProperty('HTTP_PORT') ? parseInt(process.env.API_PORT) : 3000,
+    httpPort: process.env.hasOwnProperty('HTTP_PORT') ? parseInt(process.env.HTTP_PORT) : 3000,
 
     // http auth config
     httpAuth: process.env.hasOwnProperty('HTTP_AUTH') ? Boolean(process.env.HTTP_AUTH) : true,
     httpAuthAlgorithm: process.env.hasOwnProperty('HTTP_AUTH_ALGORITHM') ? process.env.HTTP_AUTH_ALGORITHM : 'HS256',
-    httpAuthSecret: process.env.hasOwnProperty('HTTP_AUTH_SECRET') ? process.env.API_SECRET : cryptoRandomString({length: 32}),
+    httpAuthSecret: process.env.hasOwnProperty('HTTP_AUTH_SECRET') ? process.env.HTTP_AUTH_SECRET : cryptoRandomString({length: 32}),
 };
