@@ -6,6 +6,7 @@ const { logHttp } = require('../log/log');
 
 const app = express();
 app.use(express.json());
+app.disable('x-powered-by');
 app.use(logHttp);
 // add auth
 if (CONFIG.httpAuth) {
