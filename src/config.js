@@ -13,5 +13,5 @@ module.exports = {
     // http auth config
     httpAuth: process.env.hasOwnProperty('HTTP_AUTH') ? Boolean(process.env.HTTP_AUTH) : true,
     httpAuthAlgorithm: process.env.hasOwnProperty('HTTP_AUTH_ALGORITHM') ? process.env.HTTP_AUTH_ALGORITHM : 'HS256',
-    httpAuthSecret: process.env.hasOwnProperty('HTTP__AUTH_SECRET') ? process.env.API_SECRET : cryptoRandomString({length: 32}),
+    httpAuthSecret: process.env.hasOwnProperty('HTTP_AUTH_SECRET') ? process.env.API_SECRET : cryptoRandomString({length: 32}),
 };
